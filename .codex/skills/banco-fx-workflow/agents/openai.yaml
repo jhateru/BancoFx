@@ -1,0 +1,4 @@
+interface:
+  display_name: "BancoFx Workflow"
+  short_description: "Skill local para trabajar en este proyecto JavaFX con Maven"
+  default_prompt: "Usa $banco-fx-workflow para inspeccionar la estructura de BancoFx, respetar AGENTS.md, operar desde bancoproyect/ y revisar pom.xml, module-info.java, App.java, controladores y FXML antes de proponer cambios."
