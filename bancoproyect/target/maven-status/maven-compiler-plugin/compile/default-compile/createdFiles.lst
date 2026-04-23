@@ -1,0 +1,6 @@
+society\controller\FrmDiseno1.class
+society\model\Cliente.class
+module-info.class
+society\App.class
+society\controller\FrmDiseno2.class
+society\model\ClienteDao.class

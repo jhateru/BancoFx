@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="society.controller.FrmDiseno2">
+    <top>
+        <HBox spacing="20.0" alignment="CENTER" style="-fx-padding: 20; -fx-background-color: #ecf0f1;">
+            <Label text="Panel de Administración de Clientes" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+            <Button text="Volver al Inicio" onAction="#volverAInicio" />
+        </HBox>
+    </top>
+
+    <left>
+        <VBox spacing="15.0" style="-fx-padding: 20; -fx-background-color: #fdfdfd; -fx-border-color: #ddd; -fx-border-width: 0 1 0 0;">
+            <Label text="Datos del Cliente" style="-fx-font-weight: bold; -fx-font-size: 16;" />
+            
+            <GridPane hgap="10.0" vgap="10.0">
+                <Label text="Cuenta:" />
+                <TextField fx:id="txtCuenta" GridPane.columnIndex="1" />
+                
+                <Label text="Nombre:" GridPane.rowIndex="1" />
+                <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                
+                <Label text="Límite:" GridPane.rowIndex="2" />
+                <TextField fx:id="txtLimite" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                
+                <Label text="Tipo (1-3):" GridPane.rowIndex="3" />
+                <TextField fx:id="txtTipo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                
+                <Label text="Deuda:" GridPane.rowIndex="4" />
+                <TextField fx:id="txtDeuda" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            </GridPane>
+            
+            <VBox spacing="10.0" alignment="CENTER">
+                <Button text="Crear Nuevo" onAction="#crearCliente" prefWidth="150.0" />
+                <Button text="Actualizar Datos" onAction="#actualizarCliente" prefWidth="150.0" />
+                <Button text="Eliminar Cliente" onAction="#eliminarCliente" prefWidth="150.0" />
+                <Button text="Limpiar Formulario" onAction="#limpiarCampos" prefWidth="150.0" />
+            </VBox>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="10.0" style="-fx-padding: 20;">
+            <Label text="Lista de Clientes Registrados" style="-fx-font-weight: bold;" />
+            <TableView fx:id="tblClientes" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colCuenta" text="Cuenta" prefWidth="120" />
+                    <TableColumn fx:id="colNombre" text="Nombre Cliente" prefWidth="200" />
+                    <TableColumn fx:id="colLimite" text="Límite Crédito" prefWidth="120" />
+                    <TableColumn fx:id="colTipo" text="Tipo Tarjeta" prefWidth="100" />
+                    <TableColumn fx:id="colDeuda" text="Deuda Pendiente" prefWidth="120" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>

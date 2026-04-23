@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="society.controller.FrmDiseno1">
+    <padding>
+        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+    </padding>
+
+    <Label text="Cálculo de Límite de Crédito" alignment="CENTER">
+        <font>
+            <Font name="System Bold" size="22.0" />
+        </font>
+    </Label>
+
+    <GridPane hgap="15.0" vgap="15.0" alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+        </columnConstraints>
+        <children>
+            <Label text="Número de Cuenta:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextField fx:id="txtCuenta" GridPane.columnIndex="1" GridPane.rowIndex="0" promptText="Ingrese cuenta para calcular" />
+        </children>
+    </GridPane>
+
+    <HBox spacing="20.0" alignment="CENTER">
+        <Button text="Calcular Nuevo Límite" onAction="#calcularNuevoLimite" prefWidth="200.0" />
+        <Button text="Administrar Clientes" onAction="#irAAdministrar" prefWidth="200.0" />
+    </HBox>
+
+    <Separator />
+
+    <Label fx:id="lblMensaje" text="Ingrese la cuenta y presione Calcular" alignment="CENTER" wrapText="true">
+        <font>
+            <Font size="14.0" />
+        </font>
+    </Label>
+</VBox>
